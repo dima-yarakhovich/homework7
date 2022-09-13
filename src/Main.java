@@ -9,6 +9,8 @@ public class Main {
         System.out.println();
         task4();
         System.out.println();
+        task5();
+        System.out.println();
         task6();
         System.out.println();
         task7();
@@ -54,23 +56,33 @@ public class Main {
         double sum = 0;
         int yearsTotal = 9 * 12;
         for (int month = 1; month <= yearsTotal; month++) {
-            money = money + money * 0.07;
-            sum = money;
+            sum = sum + sum * 0.07;
+            sum = sum+money;
             if (month % 6 == 0) {
                 System.out.println("Месяц " + month + " сумма накоплений Василия равна " + sum + " рублей");
             }
         }
     }
 
+    private static void task5() {
+        double money = 15_000;
+        double sum = 0;
+        for (int month = 1; sum <= 12_000_000; month++) {
+            sum = sum + sum * 0.07;
+            sum = sum+money;
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + " сумма накоплений Василия равна " + sum + " рублей");
+            }
+        }
+    }
     private static void task4() {
         double money = 15_000;
         double sum = 0;
         for (int month = 1; sum <= 12_000_000; month++) {
-            money = money + money * 0.07;
-            sum = money;
-            if (month % 6 == 0) {
+            sum = sum + sum * 0.07;
+            sum = sum+money;
                 System.out.println("Месяц " + month + " сумма накоплений Василия равна " + sum + " рублей");
-            }
+
         }
     }
 
