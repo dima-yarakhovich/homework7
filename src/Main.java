@@ -89,11 +89,9 @@ public class Main {
     private static void task3() {
         int humanCountryY = 12_000_000;
         int years = 0;
-        int birth = humanCountryY / 1000 * 17;
-        int dead = humanCountryY / 1000 * 8;
         while (years <= 10) {
             years++;
-            humanCountryY = humanCountryY + birth - dead;
+            humanCountryY = humanCountryY + humanCountryY / 1000 * 17 - humanCountryY / 1000 * 8;
 
             System.out.println("Год " + years + ", численность населения составляет " + humanCountryY);
         }
